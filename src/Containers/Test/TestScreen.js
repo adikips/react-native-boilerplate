@@ -4,11 +4,17 @@ import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
+import Reactotron from 'reactotron-react-native'
 // Styles
 import styles from './TestScreenStyle'
 
 class TestScreen extends Component {
+
+  componentDidMount() {
+  }
+
   render () {
+    Reactotron.log('asd')
     return (
       <ScrollView style={styles.container}>
         <KeyboardAvoidingView behavior='position'>

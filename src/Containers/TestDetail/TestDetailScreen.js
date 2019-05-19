@@ -3,6 +3,7 @@ import { ScrollView, Text, KeyboardAvoidingView } from 'react-native'
 import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
+import StoryBookUI from '../../../storybook';
 
 // Styles
 import styles from './TestDetailScreenStyle'
@@ -10,11 +11,7 @@ import styles from './TestDetailScreenStyle'
 class TestDetailScreen extends Component {
   render () {
     return (
-      <ScrollView style={styles.container}>
-        <KeyboardAvoidingView behavior='position'>
-          <Text>TestDetailScreen</Text>
-        </KeyboardAvoidingView>
-      </ScrollView>
+      <StoryBookUI/>
     )
   }
 }

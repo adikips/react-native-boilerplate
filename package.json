@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "release-android": "cd android && ./gradlew assembleRelease && cd ..",
+    "build-android": "cd android && ./gradlew assembleDebug && cd ..",
+    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios"
   },
   "dependencies": {
     "@storybook/addon-ondevice-knobs": "^4.1.18",
     "@storybook/addon-ondevice-notes": "^4.1.18",
     "@storybook/cli": "^5.0.11",
-    "@storybook/react": "^5.0.11",
     "apisauce": "^1.0.2",
     "react": "16.8.3",
     "react-native": "0.59.8",
