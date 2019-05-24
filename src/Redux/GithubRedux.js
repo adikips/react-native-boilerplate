@@ -30,18 +30,20 @@ export const GithubSelectors = {
 /* ------------- Reducers ------------- */
 
 // request the avatar for a user
-export const request = (state, { username }) =>
-  state.merge({ fetching: true, username, avatar: null })
+export const request = (state, { username }) =>{
+  return { ...state, fetching: true, username, avatar: null }
+}
 
 // successful avatar lookup
 export const success = (state, action) => {
   const { avatar } = action
-  return state.merge({ fetching: false, error: null, avatar })
+  return { ...state, fetching: false, error: null, avatar }
 }
 
 // failed to get the avatar
-export const failure = (state) =>
-  state.merge({ fetching: false, error: true, avatar: null })
+export const failure = (state) =>{
+  return { ...state, fetching: false, error: true, avatar: null }
+}
 
 /* ------------- Hookup Reducers To Types ------------- */
 

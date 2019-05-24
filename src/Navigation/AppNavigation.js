@@ -22,21 +22,6 @@ import styles from './Styles/NavigationStyles'
 const TestStack = createStackNavigator({
   Test: {
     screen: TestScreen,
-    navigationOptions: ({ navigation }) => {
-      return {
-        headerTitle: 'Test',
-        headerLeft: (
-          <Icon
-            style={{
-              paddingLeft: 10
-            }}
-            onPress={() => navigation.openDrawer()}
-            name='md-menu'
-            size={30}
-          ></Icon>
-        )
-      }
-    }
   },
   TestDetail: {
     screen: TestDetailScreen
@@ -174,7 +159,7 @@ const AppDrawerNavigator = createDrawerNavigator({
 
 const AppSwitchNavigator = createSwitchNavigator({
   Launch: { screen: LaunchScreen },
-  Dashboard: { screen: AppDrawerNavigator }
+  Dashboard: { screen: DashboardTabNavigator }
 })
 
 export default createAppContainer(AppSwitchNavigator)

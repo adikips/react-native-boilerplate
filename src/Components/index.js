@@ -6,3 +6,4 @@ export * from "./Text";
 export * from "./Card";
 export * from "./Tag";
 export * from "./CenteredWrapper";
+export * from "./Button";
