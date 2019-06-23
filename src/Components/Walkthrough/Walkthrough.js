@@ -3,12 +3,11 @@ import { Image, Text , View} from 'react-native'
 import PropTypes from 'prop-types'
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { connect } from 'react-redux';
-import AppActions from '../../Redux/AppRedux';
 import styles from './WalkthroughStyles'
 import { Colors, Metrics } from '../../Themes';
 
 
-class Walkthrough extends Component {
+export default class Walkthrough extends Component {
   static propTypes = {
     data: PropTypes.array,
     navigator: PropTypes.object
@@ -31,8 +30,8 @@ class Walkthrough extends Component {
           resizeMode="contain"
           style={[
             {
-              width: props.width || 225,
-              height: props.height || 225,
+              width: 225,
+              height: 225,
             },
           ]}
         />
@@ -81,13 +80,13 @@ class Walkthrough extends Component {
   }
 }
 
-const mapStateToProps = ({app}) =>   {
-  return app
-}
+// const mapStateToProps = ({app}) =>   {
+//   return app
+// }
 
-// wraps dispatch to create nicer functions to call within our component
-const mapDispatchToProps = (dispatch) => ({
-  finishIntro: () => dispatch(AppActions.finishIntro())
-})
+// // wraps dispatch to create nicer functions to call within our component
+// const mapDispatchToProps = (dispatch) => ({
+//   finishIntro: () => dispatch(AppActions.finishIntro())
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Walkthrough)
+// export default connect(null, null)(Walkthrough)
