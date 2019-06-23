@@ -7,3 +7,5 @@ export * from "./Card";
 export * from "./Tag";
 export * from "./CenteredWrapper";
 export * from "./Button";
+export * from "./SearchBar";
+export * from "./Walkthrough";
